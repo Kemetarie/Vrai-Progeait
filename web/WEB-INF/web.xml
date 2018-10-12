@@ -4,4 +4,15 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <display-name>QCM</display-name>
+    <welcome-file-list>
+        <welcome-file>accueil</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>accueilJsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/home.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>accueilJsp</servlet-name>
+        <url-pattern>/QCM/homejsp</url-pattern>
+    </servlet-mapping>
 </web-app>
