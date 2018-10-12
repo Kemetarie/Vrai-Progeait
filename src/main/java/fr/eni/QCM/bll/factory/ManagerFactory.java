@@ -36,4 +36,10 @@ public class ManagerFactory {
     public static ThemesManager themesManager() {
         return ThemesManagerImpl.getInstance();
     }
+    public static UtilisateursManager utilisateurManager() {
+        return UtilisateursManagerImpl.getInstance();
+    }
+    public static CandidatsManager candidatsManager() {
+        return CandidatsManagerImpl.getInstance();
+    }
 }

@@ -23,7 +23,7 @@
 <div class="container">
 
     <div class="container text-center">
-        <form method="post">
+        <form method="post" action="/QCM/connect">
             <label>Nom d'utilisateur <input type="text" class="form-text" placeholder="Nom d'utilisateur"
                                             name="user"></label> <br>
             <label>Mot de passe <input type="password" placeholder="Mot de passe" class="form-text"

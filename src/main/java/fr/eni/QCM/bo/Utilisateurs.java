@@ -16,18 +16,16 @@ public class Utilisateurs implements Serializable {
 
     private int idEpreuve;
 
-    private Candidats candidat;
-
     public Utilisateurs() {
     }
 
-    public Utilisateurs(int idUtilisateur, String nom, String prenom, String email, String password, Candidats candidat) {
+    public Utilisateurs(int idUtilisateur, String nom, String prenom, String email, String password) {
         this.idUtilisateur = idUtilisateur;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.password = password;
-        this.candidat = candidat;
+
     }
 
     public int getIdUtilisateur() {
@@ -78,11 +76,4 @@ public class Utilisateurs implements Serializable {
         this.idEpreuve = idEpreuve;
     }
 
-    public Candidats getCandidat() {
-        return candidat;
-    }
-
-    public void setCandidat(Candidats candidat) {
-        this.candidat = candidat;
-    }
 }
