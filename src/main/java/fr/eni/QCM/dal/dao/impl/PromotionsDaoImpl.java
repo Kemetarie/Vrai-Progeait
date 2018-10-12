@@ -1,6 +1,7 @@
 package dal.dao.impl;
 
-import bo.Propositions;
+import bo.Promotions;
+import bo.Themes;
 import dal.dao.PromotionsDAO;
 import dal.exception.DaoException;
 import fr.eni.tp.web.common.dal.factory.MSSQLConnectionFactory;
@@ -12,22 +13,34 @@ import java.util.List;
 
 public class PromotionsDaoImpl implements PromotionsDAO {
 
-    private static final String SELECT_ALL_PROPOSITION_QUERY = "SELECT p.idProposition as propo_id, p.enonce as propo_enonce, p.estBonne as propo_estBonne FROM propositions p";
-    private static final String SELECT_ONE_PROPOSITION_QUERY = "SELECT p.idProposition as propo_id, p.enonce as propo_enonce, p.estBonne as propo_estBonne FROM propositions p where p.idProposition = ?";
+    private static final String SELECT_ALL_PROMOTION_QUERY = "SELECT p.codePromo as promo_id, p.libelle as promo_libelle FROM promotions p";
+    private static final String SELECT_ONE_PROMOTION_QUERY = "SELECT p.codePromo as promo_id, p.libelle as promo_libelle FROM promotions p where p.codePromo = ?";
+    private static final String SELECT_BY_LIBELLE_QUERY = "SELECT p.codePromo as promo_id, p.libelle as promo_libelle FROM promotions p where p.libelle = ?";
     private static final String SELECT_ONE_TEST_BY_LIBELLE_QUERY = "SELECT t.id FROM test t where t.description = ?";
     //private static final String INSERT_NOTE_QUERY = "INSERT INTO test(libelle, description, duree, seuil_haut, seuil_bas) VALUES (?, ?, ?, ?, ?)";
     //private static final String DELETE_NOTE_QUERY = "DELETE FROM test WHERE id = ?";
     //private static final String UPDATE_NOTE_QUERY = "UPDATE test SET libelle = ?, description = ?, duree = ?, seuil_haut = ?, seuil_bas = ? WHERE id = ?";
 
-    private static TestsDaoImpl instance;
+    private static PromotionsDaoImpl instance;
+
+    private PromotionsDaoImpl() {
+
+    }
+
+    public static PromotionsDaoImpl getInstance() {
+        if(instance==null){
+            instance = new PromotionsDaoImpl();
+        }
+        return instance;
+    }
 
     @Override
-    public Propositions insert(Propositions element) throws DaoException {
+    public Promotions insert(Promotions element) throws DaoException {
         return null;
     }
 
     @Override
-    public void update(Propositions element) throws DaoException {
+    public void update(Promotions element) throws DaoException {
 
     }
 
@@ -37,21 +50,21 @@ public class PromotionsDaoImpl implements PromotionsDAO {
     }
 
     @Override
-    public Propositions selectById(Integer integer) throws DaoException {
+    public Promotions selectById(Integer integer) throws DaoException {
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
-        Propositions propositions = null;
+        Promotions promotions = null;
 
         try {
             connection = MSSQLConnectionFactory.get();
-            statement = connection.prepareStatement(SELECT_ONE_PROPOSITION_QUERY);
+            statement = connection.prepareStatement(SELECT_ONE_PROMOTION_QUERY);
 
             statement.setInt(1, integer);
             resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
-                propositions = resultSetToPropositions(resultSet);
+                promotions = resultSetToPromotions(resultSet);
             }
         } catch(SQLException e) {
             throw new DaoException(e.getMessage(), e);
@@ -59,23 +72,23 @@ public class PromotionsDaoImpl implements PromotionsDAO {
             ResourceUtil.safeClose(resultSet, statement, connection);
         }
 
-        return propositions;
+        return promotions;
     }
 
     @Override
-    public List<Propositions> selectAll() throws DaoException {
+    public List<Promotions> selectAll() throws DaoException {
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
-        List<Propositions> list = new ArrayList<>();
+        List<Promotions> list = new ArrayList<>();
 
         try {
             connection = MSSQLConnectionFactory.get();
             statement = connection.createStatement();
-            resultSet = statement.executeQuery(SELECT_ALL_PROPOSITION_QUERY);
+            resultSet = statement.executeQuery(SELECT_ALL_PROMOTION_QUERY);
 
             while (resultSet.next()) {
-                list.add(resultSetToPropositions(resultSet));
+                list.add(resultSetToPromotions(resultSet));
             }
         } catch(SQLException e) {
             throw new DaoException(e.getMessage(), e);
@@ -86,14 +99,39 @@ public class PromotionsDaoImpl implements PromotionsDAO {
         return list;
     }
 
-    private Propositions resultSetToPropositions(ResultSet resultSet) throws SQLException {
+    @Override
+    public Promotions selectByLibelle(String libelle) throws DaoException {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        Promotions promotions = null;
 
-        Propositions propositions = new Propositions();
-        propositions.setIdProposition(resultSet.getInt("propo_id"));
-        propositions.setEnonce(resultSet.getString("propo_enonce"));
-        propositions.setEstBonne(resultSet.getBoolean("propo_estBonne"));
+        try {
+            connection = MSSQLConnectionFactory.get();
+            statement = connection.prepareStatement(SELECT_BY_LIBELLE_QUERY);
 
-        return propositions;
+            statement.setString(1, libelle);
+            resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                promotions = resultSetToPromotions(resultSet);
+            }
+        } catch(SQLException e) {
+            throw new DaoException(e.getMessage(), e);
+        } finally {
+            ResourceUtil.safeClose(resultSet, statement, connection);
+        }
+
+        return promotions;
+    }
+
+    private Promotions resultSetToPromotions(ResultSet resultSet) throws SQLException {
+
+        Promotions promotions = new Promotions();
+        promotions.setCodePromo(resultSet.getInt("promo_id"));
+        promotions.setLibelle(resultSet.getString("promo_libelle"));
+
+        return promotions;
 
     }
 }

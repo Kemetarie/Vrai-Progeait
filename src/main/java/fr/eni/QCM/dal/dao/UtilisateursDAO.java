@@ -1,6 +1,5 @@
 package dal.dao;
 
-import bo.Themes;
 import bo.Utilisateurs;
 import dal.exception.DaoException;
 
