@@ -19,7 +19,18 @@ public class PropositionsDaoImpl implements PropositionsDAO {
     //private static final String DELETE_NOTE_QUERY = "DELETE FROM test WHERE id = ?";
     //private static final String UPDATE_NOTE_QUERY = "UPDATE test SET libelle = ?, description = ?, duree = ?, seuil_haut = ?, seuil_bas = ? WHERE id = ?";
 
-    private static TestsDaoImpl instance;
+    private static PropositionsDaoImpl instance;
+
+    private PropositionsDaoImpl() {
+
+    }
+
+    public static PropositionsDaoImpl getInstance() {
+        if(instance==null){
+            instance = new PropositionsDaoImpl();
+        }
+        return instance;
+    }
 
     @Override
     public Propositions insert(Propositions element) throws DaoException {

@@ -1,4 +1,4 @@
-package main.java.fr.eni.QCM.bll.manager;
+package bll.manager;
 
 import bo.Sections_Test;
 import fr.eni.tp.web.common.bll.exception.ElementNotFoundException;

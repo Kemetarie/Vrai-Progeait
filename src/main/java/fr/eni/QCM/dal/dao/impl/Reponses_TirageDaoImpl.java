@@ -19,7 +19,18 @@ public class Reponses_TirageDaoImpl implements Reponses_TirageDAO {
     //private static final String DELETE_NOTE_QUERY = "DELETE FROM test WHERE id = ?";
     //private static final String UPDATE_NOTE_QUERY = "UPDATE test SET libelle = ?, description = ?, duree = ?, seuil_haut = ?, seuil_bas = ? WHERE id = ?";
 
-    private static TestsDaoImpl instance;
+    private static Reponses_TirageDaoImpl instance;
+
+    private Reponses_TirageDaoImpl() {
+
+    }
+
+    public static Reponses_TirageDaoImpl getInstance() {
+        if(instance==null){
+            instance = new Reponses_TirageDaoImpl();
+        }
+        return instance;
+    }
 
     @Override
     public Reponses_Tirage insert(Reponses_Tirage element) throws DaoException {

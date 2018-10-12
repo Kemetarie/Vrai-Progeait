@@ -22,6 +22,17 @@ public class QuestionsDaoImpl implements QuestionsDAO {
 
     private static QuestionsDaoImpl instance;
 
+    private QuestionsDaoImpl() {
+
+    }
+
+    public static QuestionsDaoImpl getInstance() {
+        if(instance==null){
+            instance = new QuestionsDaoImpl();
+        }
+        return instance;
+    }
+
     @Override
     public Questions insert(Questions element) throws DaoException {
         return null;

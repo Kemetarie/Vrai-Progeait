@@ -19,8 +19,18 @@ public class Questions_TirageDaoImpl implements Questions_TirageDAO {
     //private static final String DELETE_NOTE_QUERY = "DELETE FROM test WHERE id = ?";
     //private static final String UPDATE_NOTE_QUERY = "UPDATE test SET libelle = ?, description = ?, duree = ?, seuil_haut = ?, seuil_bas = ? WHERE id = ?";
 
-    private static TestsDaoImpl instance;
+    private static Questions_TirageDaoImpl instance;
 
+    private Questions_TirageDaoImpl() {
+
+    }
+
+    public static Questions_TirageDaoImpl getInstance() {
+        if(instance==null){
+            instance = new Questions_TirageDaoImpl();
+        }
+        return instance;
+    }
     @Override
     public Questions_Tirage insert(Questions_Tirage element) throws DaoException {
         return null;

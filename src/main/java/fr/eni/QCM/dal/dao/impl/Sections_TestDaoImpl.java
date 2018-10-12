@@ -21,6 +21,17 @@ public class Sections_TestDaoImpl implements Sections_TestDAO {
 
     private static Sections_TestDaoImpl instance;
 
+    private Sections_TestDaoImpl() {
+
+    }
+
+    public static Sections_TestDaoImpl getInstance() {
+        if(instance==null){
+            instance = new Sections_TestDaoImpl();
+        }
+        return instance;
+    }
+
     @Override
     public Sections_Test insert(Sections_Test element) throws DaoException {
         return null;

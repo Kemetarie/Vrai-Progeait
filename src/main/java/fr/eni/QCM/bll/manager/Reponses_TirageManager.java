@@ -1,4 +1,4 @@
-package main.java.fr.eni.QCM.bll.manager;
+package bll.manager;
 
 import bo.Propositions;
 import bo.Reponses_Tirage;

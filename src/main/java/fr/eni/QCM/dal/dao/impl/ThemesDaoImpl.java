@@ -19,7 +19,18 @@ public class ThemesDaoImpl implements ThemesDAO {
     private static final String DELETE_NOTE_QUERY = "DELETE FROM note WHERE id = ?";
     private static final String UPDATE_NOTE_QUERY = "UPDATE note SET nom = ?, content = ? WHERE id = ?";
 
-    private static Sections_TestDaoImpl instance;
+    private static ThemesDaoImpl instance;
+
+    private ThemesDaoImpl() {
+
+    }
+
+    public static ThemesDaoImpl getInstance() {
+        if(instance == null) {
+            instance = new ThemesDaoImpl();
+        }
+        return instance;
+    }
 
     @Override
     public Themes insert(Themes element) throws DaoException {
