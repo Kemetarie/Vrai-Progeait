@@ -8,14 +8,14 @@
 
 <title>Accueil QCM</title>
 
-<jsp:include page="head.jsp">
+<jsp:include page="/WEB-INF/jsp/head.jsp">
 	<jsp:param name="contextPath" value="${pageContext.request.contextPath}"/>
 </jsp:include>
 
 </head>
 <body>
 
-<jsp:include page="header.jsp">
+<jsp:include page="/WEB-INF/jsp/header.jsp">
 	<jsp:param name="contextPath" value="${pageContext.request.contextPath}"/>
 </jsp:include>
 	
@@ -27,6 +27,6 @@
 
 		</div>
 	</div>
-<jsp:include page="footer.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/jsp/footer.jsp"></jsp:include>
 </body>
 </html>
