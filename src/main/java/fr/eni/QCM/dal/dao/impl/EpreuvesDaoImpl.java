@@ -76,32 +76,6 @@ public class EpreuvesDaoImpl implements EpreuvesDAO {
     }
 
     @Override
-    public Epreuves selectById(Integer integer) throws DaoException {
-        Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-        Epreuves epreuves = null;
-
-        try {
-            connection = MSSQLConnectionFactory.get();
-            statement = connection.prepareStatement(SELECT_ONE_EPREUVE_QUERY);
-
-            statement.setInt(1, integer);
-            resultSet = statement.executeQuery();
-
-            while (resultSet.next()) {
-                epreuves = resultSetToEpreuves(resultSet);
-            }
-        } catch(SQLException e) {
-            throw new dal.exception.DaoException(e.getMessage(), e);
-        } finally {
-            ResourceUtil.safeClose(resultSet, statement, connection);
-        }
-
-        return epreuves;
-    }
-
-    @Override
     public List<Epreuves> selectAll() throws DaoException {
 
         Connection connection = null;
@@ -124,6 +98,32 @@ public class EpreuvesDaoImpl implements EpreuvesDAO {
         }
 
         return list;
+    }
+
+    @Override
+    public Epreuves selectById(Integer integer) throws DaoException {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        Epreuves epreuves = null;
+
+        try {
+            connection = MSSQLConnectionFactory.get();
+            statement = connection.prepareStatement(SELECT_ONE_EPREUVE_QUERY);
+
+            statement.setInt(1, integer);
+            resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                epreuves = resultSetToEpreuves(resultSet);
+            }
+        } catch (SQLException e) {
+            throw new dal.exception.DaoException(e.getMessage(), e);
+        } finally {
+            ResourceUtil.safeClose(resultSet, statement, connection);
+        }
+
+        return epreuves;
     }
 
     private Epreuves resultSetToEpreuves(ResultSet resultSet) throws SQLException {

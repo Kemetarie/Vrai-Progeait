@@ -1,8 +1,10 @@
 package bll.manager.impl;
 
-import bll.manager.ThemesManager;
-import bo.Themes;
-import dal.dao.ThemesDAO;
+import bll.manager.CandidatsManager;
+import bo.Candidats;
+import bo.Profils;
+import dal.dao.CandidatsDAO;
+import dal.dao.ProfilsDAO;
 import dal.exception.DaoException;
 import dal.factory.DAOFactory;
 import fr.eni.tp.web.common.bll.exception.ElementNotFoundException;
@@ -11,31 +13,31 @@ import fr.eni.tp.web.common.util.ValidationUtil;
 
 import java.util.List;
 
-public class ThemesManagerImpl implements ThemesManager {
+public class CandidatsManagerImpl implements CandidatsManager {
 
+    private CandidatsDAO candidatsDAO = DAOFactory.candidatsDAO();
 
-    private ThemesDAO themesDAO = DAOFactory.themesDAO();
+    private static CandidatsManagerImpl instance;
 
-    private static ThemesManagerImpl instance;
-
-    private ThemesManagerImpl() {
+    private CandidatsManagerImpl() {
 
     }
 
-    public static ThemesManagerImpl getInstance() {
+    public static CandidatsManagerImpl getInstance() {
         if(instance == null) {
-            instance = new ThemesManagerImpl();
+            instance = new CandidatsManagerImpl();
         }
         return instance;
     }
 
-    @Override
-    public List<Themes> selectAll() throws ManagerException {
 
-        List<Themes> list = null;
+    @Override
+    public List<Candidats> selectAll() throws ManagerException {
+
+        List<Candidats> list = null;
 
         try {
-            list = themesDAO.selectAll();
+            list = candidatsDAO.selectAll();
 
         } catch (DaoException e) {
             throw new ManagerException(e.getMessage(), e);
@@ -45,17 +47,17 @@ public class ThemesManagerImpl implements ThemesManager {
     }
 
     @Override
-    public Themes selectById(Integer id) throws ManagerException, ElementNotFoundException {
+    public Candidats selectById(Integer id) throws ManagerException, ElementNotFoundException {
 
-        Themes themes = null;
+        Candidats candidats = null;
 
         try {
 
             ValidationUtil.checkNotNull(id);
 
-            themes = themesDAO.selectById(id);
+            candidats = candidatsDAO.selectById(id);
 
-            if(themes == null) {
+            if(candidats == null) {
                 throw new ElementNotFoundException("The note does not exist", null);
             }
 
@@ -65,6 +67,6 @@ public class ThemesManagerImpl implements ThemesManager {
             throw new ManagerException("The id cannot be null", e);
         }
 
-        return themes;
+        return candidats;
     }
 }
