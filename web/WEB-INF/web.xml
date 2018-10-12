@@ -15,4 +15,12 @@
         <servlet-name>accueilJsp</servlet-name>
         <url-pattern>/QCM/homejsp</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>connectJsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/connect.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>connectJsp</servlet-name>
+        <url-pattern>/QCM/connectjsp</url-pattern>
+    </servlet-mapping>
 </web-app>
