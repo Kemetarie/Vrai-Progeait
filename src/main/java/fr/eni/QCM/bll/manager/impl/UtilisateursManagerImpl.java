@@ -163,4 +163,28 @@ public class UtilisateursManagerImpl implements UtilisateursManager {
 
         return utilisateurs;
     }
+
+    @Override
+    public Utilisateurs selectByEmailAndPsw(String email, String psw) throws DaoException {
+
+        Utilisateurs utilisateurs = null;
+
+        try {
+
+            ValidationUtil.checkNotNull(email);
+
+            utilisateurs = utilisateursDAO.selectByEmailAndPsw(email,psw);
+
+            if(utilisateurs == null) {
+                throw new ElementNotFoundException("The note does not exist", null);
+            }
+
+        } catch (DaoException e) {
+            throw new ManagerException(e.getMessage(), e);
+        } catch (IllegalArgumentException e) {
+            throw new ManagerException("The id cannot be null", e);
+        }
+
+        return utilisateurs;
+    }
 }

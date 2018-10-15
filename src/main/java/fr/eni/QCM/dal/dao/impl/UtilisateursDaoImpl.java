@@ -1,5 +1,6 @@
 package dal.dao.impl;
 
+import bo.Candidats;
 import bo.Themes;
 import bo.Utilisateurs;
 import dal.dao.UtilisateursDAO;
@@ -19,6 +20,7 @@ public class UtilisateursDaoImpl implements UtilisateursDAO {
     private static final String SELECT_BY_SURNAME_QUERY = "SELECT u.idUtilisateur as util_id, u.nom as util_nom , u.prenom as util_prenom , u.email as util_email , u.motDePasse as util_password FROM utilisateurs u where u.prenom = ?";
     private static final String SELECT_BY_NAME_AND_SURNAME_QUERY = "SELECT u.idUtilisateur as util_id, u.nom as util_nom , u.prenom as util_prenom , u.email as util_email , u.motDePasse as util_password FROM utilisateurs u where u.nom = ? AND u.prenom = ?";
     private static final String SELECT_BY_EMAIL_QUERY = "SELECT u.idUtilisateur as util_id, u.nom as util_nom , u.prenom as util_prenom , u.email as util_email , u.motDePasse as util_password FROM utilisateurs u where u.email = ?";
+    private static final String SELECT_BY_EMAIL_AND_PSW_QUERY = "SELECT u.idUtilisateur as util_id, u.nom as util_nom , u.prenom as util_prenom , u.email as util_email , u.motDePasse as util_password FROM utilisateurs u where u.email = ? AND u.motDePasse = ?";
     private static final String SELECT_ONE_THEME_BY_LIBELLE_QUERY = "SELECT t.idTheme as theme_id FROM themes t where t.libelle = ?";
     private static final String INSERT_EPREUVE_QUERY = "INSERT INTO epreuves(dateDebutValidite, dateFinValidite,tempsEcoule, note_obtenu, niveau_obtenu, etat) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String DELETE_NOTE_QUERY = "DELETE FROM note WHERE id = ?";
@@ -207,14 +209,51 @@ public class UtilisateursDaoImpl implements UtilisateursDAO {
         return utilisateurs;
     }
 
+    @Override
+    public Utilisateurs selectByEmailAndPsw(String email, String psw) throws DaoException {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        Utilisateurs utilisateurs = null;
+
+        try {
+            connection = MSSQLConnectionFactory.get();
+            statement = connection.prepareStatement(SELECT_BY_EMAIL_AND_PSW_QUERY);
+
+            statement.setString(1, email);
+            statement.setString(2, psw);
+            resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                utilisateurs = resultSetToUtilisateurs(resultSet);
+            }
+        } catch(SQLException e) {
+            throw new dal.exception.DaoException(e.getMessage(), e);
+        } finally {
+            ResourceUtil.safeClose(resultSet, statement, connection);
+        }
+
+        return utilisateurs;
+    }
+
     private Utilisateurs resultSetToUtilisateurs(ResultSet resultSet) throws SQLException {
 
+        CandidatsDaoImpl candidatsdaoimpl = new CandidatsDaoImpl();
+        Candidats candidats = new Candidats();
+
         Utilisateurs utilisateurs = new Utilisateurs();
+
         utilisateurs.setIdUtilisateur(resultSet.getInt("util_id"));
         utilisateurs.setNom(resultSet.getString("util_nom"));
         utilisateurs.setPrenom(resultSet.getString("util_prenom"));
         utilisateurs.setEmail(resultSet.getString("util_email"));
         utilisateurs.setPassword(resultSet.getString("util_password"));
+        try {
+            candidats = candidatsdaoimpl.selectById(resultSet.getInt("util_id"));
+            candidats.
+        } catch (DaoException e) {
+            e.printStackTrace();
+        }
 
         return utilisateurs;
     }
