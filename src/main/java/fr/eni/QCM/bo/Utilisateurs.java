@@ -14,11 +14,7 @@ public class Utilisateurs implements Serializable {
 
     private String password;
 
-<<<<<<< HEAD
-    private Candidats candidat;
-=======
     private Candidats candidats;
->>>>>>> master
 
     public Utilisateurs() {
     }
@@ -72,20 +68,11 @@ public class Utilisateurs implements Serializable {
         this.password = password;
     }
 
-<<<<<<< HEAD
-    public Candidats getCandidat() {
-        return candidat;
-    }
-
-    public void setCandidat(Candidats candidat) {
-        this.candidat = candidat;
-=======
     public Candidats getCandidats() {
         return candidats;
     }
 
     public void setCandidats(Candidats candidats) {
         this.candidats = candidats;
->>>>>>> master
     }
 }
