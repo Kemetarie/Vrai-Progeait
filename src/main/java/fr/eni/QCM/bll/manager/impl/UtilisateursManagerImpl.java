@@ -79,13 +79,11 @@ public class UtilisateursManagerImpl implements UtilisateursManager {
             utilisateurs = utilisateursDAO.selectByName(name);
 
             if(utilisateurs == null) {
-                throw new ElementNotFoundException("The note does not exist", null);
+                throw new ManagerException("The note does not exist", null);
             }
 
-        } catch (DaoException e) {
-            throw new ManagerException(e.getMessage(), e);
-        } catch (IllegalArgumentException e) {
-            throw new ManagerException("The id cannot be null", e);
+        } catch (ManagerException e) {
+            e.printStackTrace();
         }
 
         return utilisateurs;
@@ -103,13 +101,21 @@ public class UtilisateursManagerImpl implements UtilisateursManager {
             utilisateurs = utilisateursDAO.selectBySurname(surname);
 
             if(utilisateurs == null) {
-                throw new ElementNotFoundException("The note does not exist", null);
+
             }
 
         } catch (DaoException e) {
-            throw new ManagerException(e.getMessage(), e);
+            try {
+                throw new ManagerException(e.getMessage(), e);
+            } catch (ManagerException e1) {
+                e1.printStackTrace();
+            }
         } catch (IllegalArgumentException e) {
-            throw new ManagerException("The id cannot be null", e);
+            try {
+                throw new ManagerException("The id cannot be null", e);
+            } catch (ManagerException e1) {
+                e1.printStackTrace();
+            }
         }
 
         return utilisateurs;
@@ -128,13 +134,12 @@ public class UtilisateursManagerImpl implements UtilisateursManager {
             utilisateurs = utilisateursDAO.selectByNameAndSurname(name,surname);
 
             if(utilisateurs == null) {
-                throw new ElementNotFoundException("The note does not exist", null);
+                throw new ManagerException("The note does not exist", null);
             }
 
-        } catch (DaoException e) {
-            throw new ManagerException(e.getMessage(), e);
-        } catch (IllegalArgumentException e) {
-            throw new ManagerException("The id cannot be null", e);
+
+        } catch (ManagerException e) {
+            e.printStackTrace();
         }
 
         return utilisateurs;
@@ -152,13 +157,33 @@ public class UtilisateursManagerImpl implements UtilisateursManager {
             utilisateurs = utilisateursDAO.selectByEmail(email);
 
             if(utilisateurs == null) {
-                throw new ElementNotFoundException("The note does not exist", null);
+                throw new ManagerException("The note does not exist", null);
             }
 
-        } catch (DaoException e) {
-            throw new ManagerException(e.getMessage(), e);
-        } catch (IllegalArgumentException e) {
-            throw new ManagerException("The id cannot be null", e);
+        } catch (ManagerException e) {
+            e.printStackTrace();
+        }
+
+        return utilisateurs;
+    }
+
+    @Override
+    public Utilisateurs selectByEmailAndPsw(String email, String psw) throws DaoException {
+
+        Utilisateurs utilisateurs = null;
+
+        try {
+
+            ValidationUtil.checkNotNull(email);
+
+            utilisateurs = utilisateursDAO.selectByEmailAndPsw(email,psw);
+
+            if(utilisateurs == null) {
+                throw new ManagerException("The note does not exist", null);
+            }
+
+        } catch (ManagerException e) {
+            e.printStackTrace();
         }
 
         return utilisateurs;

@@ -23,7 +23,7 @@
 		
 		<h1 class="mt-5">Accueil QCM</h1>
 		<div class="col-md-12">
-		Bienvenue sur l'application QCM
+			<p>Bienvenue sur l'application QCM</p>
 
 		</div>
 	</div>

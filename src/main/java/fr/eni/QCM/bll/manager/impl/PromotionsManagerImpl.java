@@ -82,13 +82,11 @@ public class PromotionsManagerImpl implements PromotionsManager {
             promotions = promotionsDAO.selectByLibelle(libelle);
 
             if(promotions == null) {
-                throw new ElementNotFoundException("The note does not exist", null);
+                throw new ManagerException("The note does not exist", null);
             }
 
-        } catch (DaoException e) {
-            throw new ManagerException(e.getMessage(), e);
-        } catch (IllegalArgumentException e) {
-            throw new ManagerException("The id cannot be null", e);
+        } catch (ManagerException e) {
+            e.printStackTrace();
         }
 
         return promotions;

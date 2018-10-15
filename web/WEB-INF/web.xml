@@ -16,11 +16,44 @@
         <url-pattern>/QCM/homejsp</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>connectJsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/connect.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>connectJsp</servlet-name>
+        <url-pattern>/QCM/connectjsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>connectedJsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/connected.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>connectedJsp</servlet-name>
+        <url-pattern>/QCM/connectedjsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>testJsp</servlet-name>
         <jsp-file>/WEB-INF/jsp/test.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>testJsp</servlet-name>
         <url-pattern>/QCM/testjsp</url-pattern>
+
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>aboutJSP</servlet-name>
+        <jsp-file>/WEB-INF/jsp/about.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aboutJSP</servlet-name>
+        <url-pattern>/QCM/about</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>contactJSP</servlet-name>
+        <jsp-file>/WEB-INF/jsp/contact.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>contactJSP</servlet-name>
+        <url-pattern>/QCM/contact</url-pattern>
     </servlet-mapping>
 </web-app>
