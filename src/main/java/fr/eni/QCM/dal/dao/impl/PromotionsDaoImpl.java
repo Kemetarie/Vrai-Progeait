@@ -23,7 +23,7 @@ public class PromotionsDaoImpl implements PromotionsDAO {
 
     private static PromotionsDaoImpl instance;
 
-    private PromotionsDaoImpl() {
+    public PromotionsDaoImpl() {
 
     }
 
