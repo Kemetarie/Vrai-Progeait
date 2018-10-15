@@ -137,6 +137,7 @@ public class UtilisateursManagerImpl implements UtilisateursManager {
                 throw new ManagerException("The note does not exist", null);
             }
 
+
         } catch (ManagerException e) {
             e.printStackTrace();
         }
