@@ -20,4 +20,6 @@ public interface UtilisateursManager {
     Utilisateurs selectByNameAndSurname(String name,String surname) throws DaoException;
 
     Utilisateurs selectByEmail(String email) throws DaoException;
+
+    Utilisateurs selectByEmailAndPsw(String email,String psw) throws DaoException;
 }

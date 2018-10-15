@@ -13,4 +13,6 @@ public interface UtilisateursDAO extends GenericDAO<Utilisateurs,Integer> {
 
     Utilisateurs selectByEmail(String email) throws DaoException;
 
+    Utilisateurs selectByEmailAndPsw(String email,String psw) throws DaoException;
+
 }

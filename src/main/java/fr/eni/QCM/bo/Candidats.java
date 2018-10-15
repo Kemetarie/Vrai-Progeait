@@ -6,15 +6,15 @@ public class Candidats implements Serializable {
 
     private int idCandidat;
     private int codePromotion;
-    private int idEpreuve;
+    private Epreuves epreuves;
 
     public Candidats() {
     }
 
-    public Candidats(int idCandidat, int codePromotion, int idEpreuve) {
+    public Candidats(int idCandidat, int codePromotion, Epreuves epreuves) {
         this.idCandidat = idCandidat;
         this.codePromotion = codePromotion;
-        this.idEpreuve = idEpreuve;
+        this.epreuves = epreuves;
     }
 
     public int getIdCandidat() {
@@ -33,11 +33,11 @@ public class Candidats implements Serializable {
         this.codePromotion = codePromotion;
     }
 
-    public int getIdEpreuve() {
-        return idEpreuve;
+    public Epreuves getEpreuves() {
+        return epreuves;
     }
 
-    public void setIdEpreuve(int idEpreuve) {
-        this.idEpreuve = idEpreuve;
+    public void setEpreuves(Epreuves epreuves) {
+        this.epreuves = epreuves;
     }
 }

@@ -13,8 +13,8 @@ import java.util.List;
 
 public class CandidatsDaoImpl implements CandidatsDAO {
 
-    private static final String SELECT_ALL_CANDIDAT_QUERY = "SELECT c.idCandidat as candidat_id FROM candidats c";
-    private static final String SELECT_ONE_CANDIDAT_QUERY = "SELECT c.idCandidat as candidat_id FROM candidats c where c.idCandidat = ?";
+    private static final String SELECT_ALL_CANDIDAT_QUERY = "SELECT c.idCandidat as candidat_id , c.codePromotion as candidat_codePromo , c.idEpreuve as candidat_idEpreuve FROM candidats c";
+    private static final String SELECT_ONE_CANDIDAT_QUERY = "SELECT c.idCandidat as candidat_id , c.codePromotion as candidat_codePromo , c.idEpreuve as candidat_idEpreuve FROM candidats c where c.idCandidat = ?";
     private static final String SELECT_ONE_NOTE_BY_NAME_QUERY = "SELECT n.id FROM note n where n.nom = ?";
     private static final String INSERT_EPREUVE_QUERY = "INSERT INTO epreuves(dateDebutValidite, dateFinValidite,tempsEcoule, note_obtenu, niveau_obtenu, etat) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String DELETE_NOTE_QUERY = "DELETE FROM note WHERE id = ?";
@@ -100,8 +100,18 @@ public class CandidatsDaoImpl implements CandidatsDAO {
 
     private Candidats resultSetToCandidats(ResultSet resultSet) throws SQLException {
 
+        EpreuvesDaoImpl epreuvesDao = new EpreuvesDaoImpl();
+        Epreuves epreuves = new Epreuves();
+
         Candidats candidats = new Candidats();
         candidats.setIdCandidat(resultSet.getInt("candidat_id"));
+        candidats.setCodePromotion(resultSet.getInt("candidat.codePromo"));
+        try {
+            epreuves = epreuvesDao.selectById(resultSet.getInt("candidat.idEpreuve"));
+        } catch (DaoException e) {
+            e.printStackTrace();
+        }
+        candidats.setEpreuves(epreuves);
 
         return candidats;
 

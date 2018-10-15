@@ -14,7 +14,7 @@ public class Utilisateurs implements Serializable {
 
     private String password;
 
-    private int idEpreuve;
+    private Candidats candidats;
 
     public Utilisateurs() {
     }
@@ -68,12 +68,11 @@ public class Utilisateurs implements Serializable {
         this.password = password;
     }
 
-    public int getIdEpreuve() {
-        return idEpreuve;
+    public Candidats getCandidats() {
+        return candidats;
     }
 
-    public void setIdEpreuve(int idEpreuve) {
-        this.idEpreuve = idEpreuve;
+    public void setCandidats(Candidats candidats) {
+        this.candidats = candidats;
     }
-
 }
