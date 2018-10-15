@@ -250,10 +250,10 @@ public class UtilisateursDaoImpl implements UtilisateursDAO {
         utilisateurs.setPassword(resultSet.getString("util_password"));
         try {
             candidats = candidatsdaoimpl.selectById(resultSet.getInt("util_id"));
-            candidats.
         } catch (DaoException e) {
             e.printStackTrace();
         }
+        utilisateurs.setCandidats(candidats);
 
         return utilisateurs;
     }
