@@ -25,6 +25,7 @@ public class Utilisateurs implements Serializable {
         this.prenom = prenom;
         this.email = email;
         this.password = password;
+
     }
 
     public int getIdUtilisateur() {
