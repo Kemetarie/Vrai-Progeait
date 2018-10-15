@@ -29,6 +29,7 @@ public class ConnectServlet extends HttpServlet {
         UtilisateursManager userManager = ManagerFactory.utilisateurManager();
         try {
             Utilisateurs user = userManager.selectByEmail(req.getParameter("user"));
+            //System.out.println(user.getPassword());
             if(user.getPassword() != req.getParameter("password")){
                 this.doGet(req, resp);
             } else {

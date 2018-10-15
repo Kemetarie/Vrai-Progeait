@@ -60,7 +60,7 @@ public class UtilisateursDaoImpl implements UtilisateursDAO {
         Utilisateurs utilisateurs = null;
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = DriverManager.getConnection("jdbc:sqlserver://127.0.0.1:1433;databasename=progeait", "sa", "Pa$$w0rd");
             statement = connection.prepareStatement(SELECT_ONE_USER_QUERY);
 
             statement.setInt(1, integer);
@@ -86,7 +86,7 @@ public class UtilisateursDaoImpl implements UtilisateursDAO {
         List<Utilisateurs> list = new ArrayList<>();
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = DriverManager.getConnection("jdbc:sqlserver://127.0.0.1:1433;databasename=progeait", "sa", "Pa$$w0rd");
             statement = connection.createStatement();
             resultSet = statement.executeQuery(SELECT_ALL_USER_QUERY);
 
@@ -110,7 +110,7 @@ public class UtilisateursDaoImpl implements UtilisateursDAO {
         Utilisateurs utilisateurs = null;
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = DriverManager.getConnection("jdbc:sqlserver://127.0.0.1:1433;databasename=progeait", "sa", "Pa$$w0rd");
             statement = connection.prepareStatement(SELECT_BY_NAME_QUERY);
 
             statement.setString(1, name);
@@ -189,7 +189,7 @@ public class UtilisateursDaoImpl implements UtilisateursDAO {
         Utilisateurs utilisateurs = null;
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = DriverManager.getConnection("jdbc:sqlserver://127.0.0.1:1433;databaseName=progeait", "sa", "Pa$$w0rd");
             statement = connection.prepareStatement(SELECT_BY_EMAIL_QUERY);
 
             statement.setString(1, email);
