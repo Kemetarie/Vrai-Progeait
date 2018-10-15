@@ -40,4 +40,20 @@
         <url-pattern>/QCM/testjsp</url-pattern>
 
     </servlet-mapping>
+    <servlet>
+        <servlet-name>aboutJSP</servlet-name>
+        <jsp-file>/WEB-INF/jsp/about.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aboutJSP</servlet-name>
+        <url-pattern>/QCM/about</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>contactJSP</servlet-name>
+        <jsp-file>/WEB-INF/jsp/contact.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>contactJSP</servlet-name>
+        <url-pattern>/QCM/contact</url-pattern>
+    </servlet-mapping>
 </web-app>
