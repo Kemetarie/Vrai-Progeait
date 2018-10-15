@@ -5,15 +5,15 @@ import java.io.Serializable;
 public class Candidats implements Serializable {
 
     private int idCandidat;
-    private int codePromotion;
+    private Promotions promotions;
     private Epreuves epreuves;
 
     public Candidats() {
     }
 
-    public Candidats(int idCandidat, int codePromotion, Epreuves epreuves) {
+    public Candidats(int idCandidat, Promotions promotions, Epreuves epreuves) {
         this.idCandidat = idCandidat;
-        this.codePromotion = codePromotion;
+        this.promotions = promotions;
         this.epreuves = epreuves;
     }
 
@@ -25,12 +25,12 @@ public class Candidats implements Serializable {
         this.idCandidat = idCandidat;
     }
 
-    public int getCodePromotion() {
-        return codePromotion;
+    public Promotions getPromotions() {
+        return promotions;
     }
 
-    public void setCodePromotion(int codePromotion) {
-        this.codePromotion = codePromotion;
+    public void setPromotions(Promotions promotions) {
+        this.promotions = promotions;
     }
 
     public Epreuves getEpreuves() {

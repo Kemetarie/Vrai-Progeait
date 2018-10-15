@@ -2,6 +2,7 @@ package dal.dao.impl;
 
 import bo.Candidats;
 import bo.Epreuves;
+import bo.Promotions;
 import dal.dao.CandidatsDAO;
 import dal.exception.DaoException;
 import fr.eni.tp.web.common.dal.factory.MSSQLConnectionFactory;
@@ -103,14 +104,18 @@ public class CandidatsDaoImpl implements CandidatsDAO {
         EpreuvesDaoImpl epreuvesDao = new EpreuvesDaoImpl();
         Epreuves epreuves = new Epreuves();
 
+        PromotionsDaoImpl promotionsDao = new PromotionsDaoImpl();
+        Promotions promotions = new Promotions();
+
         Candidats candidats = new Candidats();
         candidats.setIdCandidat(resultSet.getInt("candidat_id"));
-        candidats.setCodePromotion(resultSet.getInt("candidat.codePromo"));
         try {
-            epreuves = epreuvesDao.selectById(resultSet.getInt("candidat.idEpreuve"));
+            promotions = promotionsDao.selectById(resultSet.getInt("candidat_idEpreuve"));
+            epreuves = epreuvesDao.selectById(resultSet.getInt("candidat_idEpreuve"));
         } catch (DaoException e) {
             e.printStackTrace();
         }
+        candidats.setPromotions(promotions);
         candidats.setEpreuves(epreuves);
 
         return candidats;
