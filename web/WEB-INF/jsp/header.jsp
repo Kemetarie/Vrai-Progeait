@@ -5,8 +5,8 @@
 <div class="header">
     <img src="${pageContext.request.contextPath}/images/ENI.jpg" alt="ENI" height="42" width="42">
     <div class="header-right">
-        <a class="active" href="#home">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a class="active" href="/QCM/homejsp">Home</a>
+        <a href="/QCM/contact">Contact</a>
+        <a href="/QCM/about">About</a>
     </div>
 </div>
