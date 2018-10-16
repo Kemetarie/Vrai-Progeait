@@ -34,12 +34,10 @@ public class ConnectServlet extends HttpServlet {
             if(!user.getPassword().equals(req.getParameter("password"))){
                 this.doGet(req, resp);
             } else {
-                CandidatsManager candidatManager = ManagerFactory.candidatsManager();
-                Candidats candidat = candidatManager.selectById(user.getIdUtilisateur());
-                req.getSession(true).setAttribute("user", candidat);
-                req.getRequestDispatcher("/QCM/connectedjsp").forward(req, resp);
+                req.getSession(true).setAttribute("user", user);
+                req.getRequestDispatcher("/QCM/home").forward(req, resp);
             }
-        } catch (DaoException | ManagerException | ElementNotFoundException e) {
+        } catch (DaoException e) {
             e.printStackTrace();
         }
 
