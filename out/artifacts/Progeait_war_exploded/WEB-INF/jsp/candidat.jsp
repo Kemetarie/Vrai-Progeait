@@ -19,10 +19,6 @@
             Date Debut de validité du test : ${requestScope.get('epreuve').dateDebutValidite} <br>
             Date Fin de validité du test : ${requestScope.get('epreuve').dateFinValidite}<br>
             Etat du test : ${requestScope.get('epreuve').etat}
-            ${listeTests}
-            <c:forEach var="toto" items="${listeTests}"  >
-                <p>${toto}
-            </c:forEach>
             <div class="container pre-scrollable">
                 <table class="table">
                     <thead>
@@ -33,9 +29,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${listeTests}" var="toto" >
+                    <c:forEach items="${listeTests}" var="Test" >
                         <tr>
-                            <td>${toto}</td>
+                            <td>${Test.libelle}</td>
                             <td style="text-align: right">
                                 <a href='${pageContext.request.contextPath}/QCM/test&id=${Test.idTest}'>
                                         votre Test

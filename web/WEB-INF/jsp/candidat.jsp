@@ -29,9 +29,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${listeTests}" var="toto" >
+                    <c:forEach items="${listeTests}" var="Test" >
                         <tr>
-                            <td>${toto}</td>
+                            <td>${Test.libelle}</td>
                             <td style="text-align: right">
                                 <a href='${pageContext.request.contextPath}/QCM/test&id=${Test.idTest}'>
                                         votre Test
