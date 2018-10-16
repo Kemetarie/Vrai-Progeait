@@ -56,4 +56,12 @@
         <servlet-name>contactJSP</servlet-name>
         <url-pattern>/QCM/contact</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>candidatJsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/candidat.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>candidatJsp</servlet-name>
+        <url-pattern>/QCM/candidatjsp</url-pattern>
+    </servlet-mapping>
 </web-app>

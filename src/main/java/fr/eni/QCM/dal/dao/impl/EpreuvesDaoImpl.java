@@ -2,6 +2,7 @@ package dal.dao.impl;
 
 import bo.Epreuves;
 import dal.dao.EpreuvesDAO;
+import dal.dao.MSSQLConnection;
 import dal.exception.DaoException;
 import fr.eni.tp.web.common.dal.factory.MSSQLConnectionFactory;
 import fr.eni.tp.web.common.util.ResourceUtil;
@@ -12,10 +13,10 @@ import java.util.List;
 
 public class EpreuvesDaoImpl implements EpreuvesDAO {
 
-    private static final String SELECT_ALL_EPREUVE_QUERY = "SELECT e.idEpreuve as epreuve_id, e.dateDebutValidite as epreuve_dateDebut, e.dateFinValidite as epreuve_dateFin, e.tempsEcoule as epreuve_temps, e.note_obtenu as epreuve_note, e.niveau_obtenu as epreuve_niveau, e.etat as epreuve_etat FROM epreuve e";
-    private static final String SELECT_ONE_EPREUVE_QUERY = "SELECT e.idEpreuve as epreuve_id, e.dateDebutValidite as epreuve_dateDebut, e.dateFinValidite as epreuve_dateFin, e.tempsEcoule as epreuve_temps, e.note_obtenu as epreuve_note, e.niveau_obtenu as epreuve_niveau, e.etat as epreuve_etat FROM epreuve e where e.idEpreuve = ?";
+    private static final String SELECT_ALL_EPREUVE_QUERY = "SELECT e.idEpreuve as epreuve_id, e.dateDebutValidite as epreuve_dateDebut, e.dateFinValidite as epreuve_dateFin, e.tempsEcoule as epreuve_temps, e.note_obtenue as epreuve_note, e.niveau_obtenu as epreuve_niveau, e.etat as epreuve_etat FROM epreuves e";
+    private static final String SELECT_ONE_EPREUVE_QUERY = "SELECT e.idEpreuve as epreuve_id, e.dateDebutValidite as epreuve_dateDebut, e.dateFinValidite as epreuve_dateFin, e.tempsEcoule as epreuve_temps, e.note_obtenue as epreuve_note, e.niveau_obtenu as epreuve_niveau, e.etat as epreuve_etat FROM epreuves e where e.idEpreuve = ?";
     private static final String SELECT_ONE_NOTE_BY_NAME_QUERY = "SELECT n.id FROM note n where n.nom = ?";
-    private static final String INSERT_EPREUVE_QUERY = "INSERT INTO epreuves(dateDebutValidite, dateFinValidite,tempsEcoule, note_obtenu, niveau_obtenu, etat) VALUES (?, ?, ?, ?, ?, ?)";
+    private static final String INSERT_EPREUVE_QUERY = "INSERT INTO epreuves(dateDebutValidite, dateFinValidite,tempsEcoule, note_obtenue, niveau_obtenu, etat) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String DELETE_NOTE_QUERY = "DELETE FROM note WHERE id = ?";
     private static final String UPDATE_NOTE_QUERY = "UPDATE note SET nom = ?, content = ? WHERE id = ?";
 
@@ -37,7 +38,7 @@ public class EpreuvesDaoImpl implements EpreuvesDAO {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
 
             statement = connection.prepareStatement(INSERT_EPREUVE_QUERY, Statement.RETURN_GENERATED_KEYS);
 
@@ -84,7 +85,7 @@ public class EpreuvesDaoImpl implements EpreuvesDAO {
         List<Epreuves> list = new ArrayList<>();
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.createStatement();
             resultSet = statement.executeQuery(SELECT_ALL_EPREUVE_QUERY);
 
@@ -108,7 +109,7 @@ public class EpreuvesDaoImpl implements EpreuvesDAO {
         Epreuves epreuves = null;
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.prepareStatement(SELECT_ONE_EPREUVE_QUERY);
 
             statement.setInt(1, integer);
