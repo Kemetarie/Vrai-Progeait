@@ -5,7 +5,7 @@
 <div class="header">
     <img src="${pageContext.request.contextPath}/images/ENI.jpg" alt="ENI" height="42" width="42">
     <div class="header-right">
-        <a class="active" href="/QCM/homejsp">Home</a>
+        <a class="active" href="/QCM/home">Home</a>
         <c:choose>
         <c:when test="${sessionScope.get('user') == null}">
             <a class="active" href="/QCM/connect">Se connecter</a>

@@ -34,7 +34,7 @@ public class CandidatServlet extends HttpServlet {
         } catch (ManagerException e) {
             e.printStackTrace();
         }
-
+        System.out.println(listeTests);
         req.setAttribute("epreuve", epreuve);
         req.setAttribute("listeTests", listeTests);
 

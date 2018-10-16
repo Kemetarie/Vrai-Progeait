@@ -139,6 +139,7 @@ public class TestsDaoImpl implements TestsDAO {
             resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
+
                 list.add(resultSetToTest(resultSet));
             }
         } catch(SQLException e) {

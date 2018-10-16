@@ -1,5 +1,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Epreuve du candidat</title>
@@ -28,9 +29,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${listeTests}" var="Test">
+                    <c:forEach items="${listeTests}" var="toto" >
                         <tr>
-                            <td>${Test.libelle}</td>
+                            <td>${toto}</td>
                             <td style="text-align: right">
                                 <a href='${pageContext.request.contextPath}/QCM/test&id=${Test.idTest}'>
                                         votre Test
