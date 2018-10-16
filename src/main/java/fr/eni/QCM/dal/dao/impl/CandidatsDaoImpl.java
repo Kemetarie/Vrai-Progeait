@@ -110,7 +110,7 @@ public class CandidatsDaoImpl implements CandidatsDAO {
         Candidats candidats = new Candidats();
         candidats.setIdCandidat(resultSet.getInt("candidat_id"));
         try {
-            promotions = promotionsDao.selectById(resultSet.getInt("candidat_idEpreuve"));
+            promotions = promotionsDao.selectById(resultSet.getInt("candidat_codePromo"));
             epreuves = epreuvesDao.selectById(resultSet.getInt("candidat_idEpreuve"));
         } catch (DaoException e) {
             e.printStackTrace();

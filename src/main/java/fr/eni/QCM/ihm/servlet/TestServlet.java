@@ -2,6 +2,7 @@ package ihm.servlet;
 
 import bll.factory.ManagerFactory;
 import bll.manager.TestsManager;
+import bo.Epreuves;
 import bo.Utilisateurs;
 import com.sun.deploy.association.utility.AppConstants;
 
@@ -21,7 +22,7 @@ public class TestServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Utilisateurs user = (Utilisateurs)req.getSession(false).getAttribute("user");
-        int IdEpreuve = user.getIdEpreuve();
+        Epreuves epreuve = user.getCandidats().getEpreuves();
 
 
         req.getRequestDispatcher("/QCM/testJsp").forward(req, resp);
