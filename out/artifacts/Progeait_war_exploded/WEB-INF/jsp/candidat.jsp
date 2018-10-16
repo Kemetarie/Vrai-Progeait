@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Epreuve du candidat</title>
+    <title>Eprevue du candidat</title>
 
     <jsp:include page="/WEB-INF/jsp/head.jsp">
         <jsp:param name="contextPath" value="${pageContext.request.contextPath}"/>

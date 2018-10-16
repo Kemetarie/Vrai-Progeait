@@ -23,6 +23,7 @@ public class CandidatServlet extends HttpServlet {
 
         Utilisateurs user = (Utilisateurs)req.getSession(false).getAttribute("user");
         Epreuves epreuve = user.getCandidats().getEpreuves();
+        req.setAttribute("epreuve", epreuve);
 
 
         req.getRequestDispatcher("/QCM/candidatJsp").forward(req, resp);
