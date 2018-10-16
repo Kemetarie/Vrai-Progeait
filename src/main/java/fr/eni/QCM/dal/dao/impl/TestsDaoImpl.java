@@ -1,6 +1,7 @@
 package dal.dao.impl;
 
 import bo.Tests;
+import dal.dao.MSSQLConnection;
 import dal.dao.TestsDAO;
 import dal.exception.DaoException;
 import fr.eni.tp.web.common.dal.factory.MSSQLConnectionFactory;
@@ -12,9 +13,10 @@ import java.util.List;
 
 public class TestsDaoImpl implements TestsDAO {
 	
-	private static final String SELECT_ALL_TESTS_QUERY = "SELECT t.id as test_id, t.libelle as test_libelle, t.description as test_description, t.duree as test_duree, t.seuil_haut as test_seuil_haut, t.seuil_bas as test_seuil_bas FROM test t";
-    private static final String SELECT_ONE_TEST_QUERY = "SELECT t.id as test_id, t.libelle as test_libelle, t.description as test_description, t.duree as test_duree, t.seuil_haut as test_seuil_haut, t.seuil_bas as test_seuil_bas FROM test t where t.id = ?";
-    private static final String SELECT_ONE_TEST_BY_LIBELLE_QUERY = "SELECT t.id FROM test t where t.description = ?";
+	private static final String SELECT_ALL_TESTS_QUERY = "SELECT t.idTest as test_id, t.libelle as test_libelle, t.description as test_description, t.duree as test_duree, t.seuil_haut as test_seuil_haut, t.seuil_bas as test_seuil_bas, t.idEpreuve as test_idEpreuve FROM tests t";
+    private static final String SELECT_ONE_TEST_QUERY = "SELECT t.idTest as test_id, t.libelle as test_libelle, t.description as test_description, t.duree as test_duree, t.seuil_haut as test_seuil_haut, t.seuil_bas as test_seuil_bas, t.idEpreuve as test_idEpreuve FROM tests t where t.id = ?";
+    private static final String SELECT_ONE_TEST_BY_LIBELLE_QUERY = "SELECT t.idTest FROM tests t where t.description = ?";
+    private static final String SELECT_ALL_TESTS_BY_EPREUVE_ID_QUERY = "SELECT t.idTest as test_id, t.libelle as test_libelle, t.description as test_description, t.duree as test_duree, t.seuil_haut as test_seuil_haut, t.seuil_bas as test_seuil_bas, t.idEpreuve as test_idEpreuve FROM tests t where t.idEpreuve = ?";
     //private static final String INSERT_NOTE_QUERY = "INSERT INTO test(libelle, description, duree, seuil_haut, seuil_bas) VALUES (?, ?, ?, ?, ?)";
     //private static final String DELETE_NOTE_QUERY = "DELETE FROM test WHERE id = ?";
     //private static final String UPDATE_NOTE_QUERY = "UPDATE test SET libelle = ?, description = ?, duree = ?, seuil_haut = ?, seuil_bas = ? WHERE id = ?";
@@ -55,7 +57,7 @@ public class TestsDaoImpl implements TestsDAO {
         Tests test = null;
         
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.prepareStatement(SELECT_ONE_TEST_QUERY);
             
             statement.setInt(1, id);
@@ -81,7 +83,7 @@ public class TestsDaoImpl implements TestsDAO {
         List<Tests> list = new ArrayList<>();
         
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.createStatement();
             resultSet = statement.executeQuery(SELECT_ALL_TESTS_QUERY);
 
@@ -105,7 +107,7 @@ public class TestsDaoImpl implements TestsDAO {
         Tests test = null;
         
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.prepareStatement(SELECT_ONE_TEST_BY_LIBELLE_QUERY);
             
             statement.setString(1, libelle);
@@ -122,7 +124,33 @@ public class TestsDaoImpl implements TestsDAO {
         
         return test;
     }
-    
+
+    @Override
+    public List<Tests> selectAllTestsByEpreuveId(int idEpreuve) throws DaoException {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        List<Tests> list = new ArrayList<>();
+
+        try {
+            connection = MSSQLConnection.get();
+            statement = connection.prepareStatement(SELECT_ALL_TESTS_BY_EPREUVE_ID_QUERY);
+            statement.setInt(1, idEpreuve);
+            resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                list.add(resultSetToTest(resultSet));
+            }
+        } catch(SQLException e) {
+            throw new DaoException(e.getMessage(), e);
+        } finally {
+            ResourceUtil.safeClose(resultSet, statement, connection);
+        }
+
+        return list;
+    }
+
+
     private Tests resultSetToTest(ResultSet resultSet) throws SQLException {
         
         Tests test = new Tests();

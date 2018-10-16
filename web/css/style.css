@@ -4,6 +4,9 @@
 .container p{
     text-align: center;
 }
+.container {
+    margin-top: 50px;
+}
 
 .header {
     overflow: hidden;
