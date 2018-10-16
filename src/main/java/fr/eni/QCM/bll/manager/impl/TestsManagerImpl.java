@@ -68,4 +68,18 @@ public class TestsManagerImpl implements TestsManager {
 
         return tests;
     }
+
+    @Override
+    public List<Tests> selectAllTestsByEpreuveId(int idEpreuve) throws ManagerException {
+        List<Tests> list = null;
+
+        try {
+            list = testsDAO.selectAllTestsByEpreuveId(idEpreuve);
+
+        } catch (DaoException e) {
+            throw new ManagerException(e.getMessage(), e);
+        }
+
+        return list;
+    }
 }

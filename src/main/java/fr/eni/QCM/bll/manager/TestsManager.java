@@ -14,4 +14,6 @@ public interface TestsManager {
 
     Tests selectById(Integer id) throws ManagerException, ElementNotFoundException;
 
+    List<Tests> selectAllTestsByEpreuveId(int idEpreuve) throws ManagerException;
+
 }
