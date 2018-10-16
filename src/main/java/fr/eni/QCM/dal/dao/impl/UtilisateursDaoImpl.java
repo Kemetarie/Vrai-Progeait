@@ -3,9 +3,9 @@ package dal.dao.impl;
 import bo.Candidats;
 import bo.Themes;
 import bo.Utilisateurs;
+import dal.dao.MSSQLConnection;
 import dal.dao.UtilisateursDAO;
 import dal.exception.DaoException;
-import fr.eni.tp.web.common.dal.factory.MSSQLConnectionFactory;
 import fr.eni.tp.web.common.util.ResourceUtil;
 
 import java.sql.*;
@@ -138,7 +138,7 @@ public class UtilisateursDaoImpl implements UtilisateursDAO {
         Utilisateurs utilisateurs = null;
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.prepareStatement(SELECT_BY_SURNAME_QUERY);
 
             statement.setString(1, surname);
@@ -164,7 +164,7 @@ public class UtilisateursDaoImpl implements UtilisateursDAO {
         Utilisateurs utilisateurs = null;
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.prepareStatement(SELECT_BY_NAME_AND_SURNAME_QUERY);
 
             statement.setString(1, name);
@@ -217,7 +217,7 @@ public class UtilisateursDaoImpl implements UtilisateursDAO {
         Utilisateurs utilisateurs = null;
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.prepareStatement(SELECT_BY_EMAIL_AND_PSW_QUERY);
 
             statement.setString(1, email);

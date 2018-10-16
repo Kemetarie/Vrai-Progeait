@@ -4,8 +4,8 @@ import bo.Candidats;
 import bo.Epreuves;
 import bo.Promotions;
 import dal.dao.CandidatsDAO;
+import dal.dao.MSSQLConnection;
 import dal.exception.DaoException;
-import fr.eni.tp.web.common.dal.factory.MSSQLConnectionFactory;
 import fr.eni.tp.web.common.util.ResourceUtil;
 
 import java.sql.*;
@@ -57,7 +57,7 @@ public class CandidatsDaoImpl implements CandidatsDAO {
         List<Candidats> list = new ArrayList<>();
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.createStatement();
             resultSet = statement.executeQuery(SELECT_ALL_CANDIDAT_QUERY);
 
@@ -81,7 +81,7 @@ public class CandidatsDaoImpl implements CandidatsDAO {
         Candidats candidats = null;
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.prepareStatement(SELECT_ONE_CANDIDAT_QUERY);
 
             statement.setInt(1, integer);
