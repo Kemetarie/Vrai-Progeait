@@ -27,10 +27,11 @@ public class ConnectServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UtilisateursManager userManager = ManagerFactory.utilisateurManager();
+        System.out.print(req.getParameter("user"));
         try {
             Utilisateurs user = userManager.selectByEmail(req.getParameter("user"));
-            //System.out.println(user.getPassword());
-            if(user.getPassword() != req.getParameter("password")){
+
+            if(!user.getPassword().equals(req.getParameter("password"))){
                 this.doGet(req, resp);
             } else {
                 CandidatsManager candidatManager = ManagerFactory.candidatsManager();
