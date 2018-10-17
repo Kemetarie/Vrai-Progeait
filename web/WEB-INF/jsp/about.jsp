@@ -3,7 +3,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
-    <embed src="${pageContext.request.contextPath}/images/Wub Wub.mp3" autostart="true" loop="true" width="2" height="0">
+    <audio controls loop hidden autoplay>
+        <source src="${pageContext.request.contextPath}/images/Wub Wub.mp3">
+    </audio>
     <style>
         body{
             background-color:black;

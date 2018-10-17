@@ -33,7 +33,7 @@
                         <tr>
                             <td>${Test.libelle}</td>
                             <td style="text-align: right">
-                                <a href='${pageContext.request.contextPath}/QCM/test&id=${Test.idTest}'>
+                                <a href='${pageContext.request.contextPath}/QCM/tirage&id=${Test.idTest}'>
                                         votre Test
                                 </a>
                             </td>
