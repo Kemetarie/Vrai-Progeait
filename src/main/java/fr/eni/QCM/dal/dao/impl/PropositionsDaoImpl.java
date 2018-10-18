@@ -12,8 +12,9 @@ import java.util.List;
 
 public class PropositionsDaoImpl implements PropositionsDAO {
 
-    private static final String SELECT_ALL_PROPOSITION_QUERY = "SELECT p.idProposition as propo_id, p.enonce as propo_enonce, p.estBonne as propo_estBonne FROM propositions p";
-    private static final String SELECT_ONE_PROPOSITION_QUERY = "SELECT p.idProposition as propo_id, p.enonce as propo_enonce, p.estBonne as propo_estBonne FROM propositions p where p.idProposition = ?";
+    private static final String SELECT_ALL_PROPOSITION_QUERY = "SELECT p.idProposition as propo_id, p.enonce as propo_enonce, p.estBonne as propo_estBonne, p.idQuestion as propo_idQuestion FROM propositions p";
+    private static final String SELECT_ONE_PROPOSITION_QUERY = "SELECT p.idProposition as propo_id, p.enonce as propo_enonce, p.estBonne as propo_estBonne, p.idQuestion as propo_idQuestion FROM propositions p where p.idProposition = ?";
+    private static final String SELECT_BY_IDQUESTION_QUERY= "SELECT p.idProposition as propo_id, p.enonce as propo_enonce, p.estBonne as propo_estBonne, p.idQuestion as propo_idQuestion FROM propositions p where p.idQuestion = ?";
     private static final String SELECT_ONE_TEST_BY_LIBELLE_QUERY = "SELECT t.id FROM test t where t.description = ?";
     //private static final String INSERT_NOTE_QUERY = "INSERT INTO test(libelle, description, duree, seuil_haut, seuil_bas) VALUES (?, ?, ?, ?, ?)";
     //private static final String DELETE_NOTE_QUERY = "DELETE FROM test WHERE id = ?";
@@ -74,6 +75,32 @@ public class PropositionsDaoImpl implements PropositionsDAO {
     }
 
     @Override
+    public List<Propositions> selectByIdQuestion(Integer integer) throws DaoException {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        List<Propositions> list = new ArrayList<>();
+
+        try {
+            connection = MSSQLConnectionFactory.get();
+            statement = connection.prepareStatement(SELECT_BY_IDQUESTION_QUERY);
+
+            statement.setInt(1, integer);
+            resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                list.add(resultSetToPropositions(resultSet));
+            }
+        } catch(SQLException e) {
+            throw new DaoException(e.getMessage(), e);
+        } finally {
+            ResourceUtil.safeClose(resultSet, statement, connection);
+        }
+
+        return list;
+    }
+
+    @Override
     public List<Propositions> selectAll() throws DaoException {
         Connection connection = null;
         Statement statement = null;
@@ -103,6 +130,7 @@ public class PropositionsDaoImpl implements PropositionsDAO {
         propositions.setIdProposition(resultSet.getInt("propo_id"));
         propositions.setEnonce(resultSet.getString("propo_enonce"));
         propositions.setEstBonne(resultSet.getBoolean("propo_estBonne"));
+        propositions.setIdQuestion(resultSet.getInt("propo_idQuestion"));
 
         return propositions;
 

@@ -13,4 +13,6 @@ public interface Reponses_TirageManager {
 
     Reponses_Tirage selectById(Integer id) throws ManagerException, ElementNotFoundException;
 
+    Reponses_Tirage insert(Reponses_Tirage reponses_Tirage) throws ManagerException;
+
 }

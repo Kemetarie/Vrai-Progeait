@@ -13,4 +13,6 @@ public interface PropositionsManager {
 
     Propositions selectById(Integer id) throws ManagerException, ElementNotFoundException;
 
+    List<Propositions> selectByIdQuestion(Integer id) throws ManagerException, ElementNotFoundException;
+
 }

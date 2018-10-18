@@ -68,4 +68,24 @@ public class PropositionsManagerImpl implements PropositionsManager {
 
         return propositions;
     }
+
+    @Override
+    public List<Propositions> selectByIdQuestion(Integer id) throws ManagerException, ElementNotFoundException {
+
+        List<Propositions> list = null;
+
+        try {
+
+            ValidationUtil.checkNotNull(id);
+
+            list = propositionsDAO.selectByIdQuestion(id);
+
+        } catch (DaoException e) {
+            throw new ManagerException(e.getMessage(), e);
+        } catch (IllegalArgumentException e) {
+            throw new ManagerException("The id cannot be null", e);
+        }
+
+        return list;
+    }
 }

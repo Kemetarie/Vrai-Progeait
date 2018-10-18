@@ -10,6 +10,10 @@ public class Questions_Tirage implements Serializable {
 
     private int numOrdre;
 
+    private int idEpreuve;
+
+    private int idQuestion;
+
     public Questions_Tirage() {
     }
 
@@ -41,5 +45,21 @@ public class Questions_Tirage implements Serializable {
 
     public void setNumOrdre(int numOrdre) {
         this.numOrdre = numOrdre;
+    }
+
+    public int getIdEpreuve() {
+        return idEpreuve;
+    }
+
+    public void setIdEpreuve(int idEpreuve) {
+        this.idEpreuve = idEpreuve;
+    }
+
+    public int getIdQuestion() {
+        return idQuestion;
+    }
+
+    public void setIdQuestion(int idQuestion) {
+        this.idQuestion = idQuestion;
     }
 }

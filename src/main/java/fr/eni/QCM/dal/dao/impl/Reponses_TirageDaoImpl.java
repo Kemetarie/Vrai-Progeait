@@ -12,9 +12,10 @@ import java.util.List;
 
 public class Reponses_TirageDaoImpl implements Reponses_TirageDAO {
 
-    private static final String SELECT_ALL_REPONSE_QUERY = "SELECT r.idReponseTirage as reponse_id FROM reponses_Tirage r";
-    private static final String SELECT_ONE_REPONSE_QUERY = "SELECT r.idReponseTirage as reponse_id FROM reponses_Tirage r where r.idReponseTirage = ?";
+    private static final String SELECT_ALL_REPONSE_QUERY = "SELECT r.idQuestion_Tirage as reponse_idQuestion,r.idProposition as reponse_idPropo  FROM reponses_Tirage r";
+    private static final String SELECT_ONE_REPONSE_QUERY = "SELECT r.idQuestion_Tirage as reponse_idQuestion,r.idProposition as reponse_idPropo  FROM reponses_Tirage r where r.idReponseTirage = ?";
     private static final String SELECT_ONE_TEST_BY_LIBELLE_QUERY = "SELECT t.id FROM test t where t.description = ?";
+    private static final String INSERT_REPONSE_QUERY = "INSERT INTO reponses_Tirage(idQuestion_Tirage, idProposition) VALUES (?, ?)";
     //private static final String INSERT_NOTE_QUERY = "INSERT INTO test(libelle, description, duree, seuil_haut, seuil_bas) VALUES (?, ?, ?, ?, ?)";
     //private static final String DELETE_NOTE_QUERY = "DELETE FROM test WHERE id = ?";
     //private static final String UPDATE_NOTE_QUERY = "UPDATE test SET libelle = ?, description = ?, duree = ?, seuil_haut = ?, seuil_bas = ? WHERE id = ?";
@@ -34,7 +35,24 @@ public class Reponses_TirageDaoImpl implements Reponses_TirageDAO {
 
     @Override
     public Reponses_Tirage insert(Reponses_Tirage element) throws DaoException {
-        return null;
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = MSSQLConnectionFactory.get();
+
+            statement = connection.prepareStatement(INSERT_REPONSE_QUERY, Statement.RETURN_GENERATED_KEYS);
+
+            statement.setInt(1, element.getIdQuestion_Tirage());
+            statement.setInt(2, element.getIdProposition());
+
+        } catch (SQLException e) {
+            throw new DaoException(e.getMessage(), e);
+        } finally {
+            ResourceUtil.safeClose(resultSet, statement, connection);
+        }
+
+        return element;
     }
 
     @Override
@@ -100,7 +118,8 @@ public class Reponses_TirageDaoImpl implements Reponses_TirageDAO {
     private Reponses_Tirage resultSetToReponses(ResultSet resultSet) throws SQLException {
 
         Reponses_Tirage reponses = new Reponses_Tirage();
-        reponses.setIdReponseTirage(resultSet.getInt("test_id"));
+        reponses.setIdProposition(resultSet.getInt("test_id"));
+        reponses.setIdQuestion_Tirage(resultSet.getInt("test_id"));
 
         return reponses;
 

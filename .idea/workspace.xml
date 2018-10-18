@@ -106,28 +106,37 @@
     <session id="73280494">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="128" />
+          <entry key="java" value="178" />
+          <entry key="jsp" value="16" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="128" />
+          <entry key="JAVA" value="178" />
+          <entry key="JSP" value="16" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1479" />
+          <entry key="java" value="3613" />
+          <entry key="jsp" value="325" />
+          <entry key="xml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1479" />
+          <entry key="JAVA" value="3613" />
+          <entry key="JSP" value="325" />
+          <entry key="XML" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.37" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.39" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -186,83 +195,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Utilisateurs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/ihm/servlet/CandidatServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/TestsManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/TestsManagerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/candidat.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/ihm/servlet/QuestionServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+            <state relative-caret-position="748">
+              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/header.jsp">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/question.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="8" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
+            <state relative-caret-position="467">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/TestsDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/EpreuvesDaoImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/Reponses_TirageDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="111" column="25" lean-forward="true" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="47" />
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/Reponses_TirageDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="50" column="19" lean-forward="true" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/Reponses_TirageManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/Reponses_TirageManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -288,26 +273,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Sections_Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Tests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Themes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/Reponses_TirageDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/CollaborateursDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/GenericDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/PropositionsDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/Questions_TirageDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/QuestionsDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/Sections_TestDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/TestsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/ThemesDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/exception/DaoException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/PropositionsDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/Questions_TirageDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/QuestionsDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/Reponses_TirageDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/Sections_TestDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/ThemesDaoImpl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/PromotionsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/PromotionsManager.java" />
@@ -339,6 +309,21 @@
         <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/TestsDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/ihm/servlet/CandidatServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/candidat.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Questions_Tirage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/Questions_TirageDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Propositions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/PropositionsDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/PropositionsManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/PropositionsManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Reponses_Tirage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/PropositionsDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/Reponses_TirageManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/Reponses_TirageManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/Reponses_TirageDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/Reponses_TirageDAO.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/question.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/eni/QCM/ihm/servlet/QuestionServlet.java" />
       </list>
     </option>
   </component>
@@ -356,10 +341,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="139" />
-    <option name="y" value="189" />
-    <option name="width" value="640" />
-    <option name="height" value="984" />
+    <option name="x" value="184" />
+    <option name="y" value="210" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -368,6 +353,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -511,7 +497,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -632,35 +617,46 @@
       <workItem from="1539331717472" duration="710000" />
       <workItem from="1539332572391" duration="283000" />
       <workItem from="1539590550456" duration="7343000" />
+      <workItem from="1539758550138" duration="21357000" />
+      <workItem from="1539845622786" duration="8497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35088000" />
+    <option name="totallyTimeSpent" value="64942000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2506427" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7734628" visible="true" weight="0.21588486" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.22653721" side_tool="true" weight="0.19029851" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39892185" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.335141" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.27548808" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.21908894" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3290993" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4989339" weight="0.329718" />
+      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49733475" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49840087" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5026652" side_tool="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286334" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
@@ -675,6 +671,40 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7734628" visible="true" weight="0.19029851" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" sideWeight="0.22653721" side_tool="true" weight="0.19029851" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49946696" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3290993" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -683,198 +713,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/QuestionsDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-998">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/Reponses_TirageDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/Sections_TestDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/CandidatsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/EpreuvesDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="111" column="25" lean-forward="true" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/ProfilsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="85" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="13" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/CandidatsManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/CollaborateursDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/EpreuvesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/CollaborateursDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/ProfilsDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/EpreuvesManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" selection-start-line="10" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/CollaborateursManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/CollaborateursManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/EpreuvesManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="48" selection-start-line="48" selection-end-line="67" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/factory/DAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/ProfilsManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/PromotionsManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Epreuves.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Note.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Profils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Promotions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Collaborateurs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/ThemesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="63" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Themes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/CandidatsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/UtilisateursManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/UtilisateursManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
@@ -885,20 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/UtilisateursDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Utilisateurs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Candidats.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -906,34 +730,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/PromotionsDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/CandidatsDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -955,16 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/UtilisateursDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="140" column="47" selection-start-line="140" selection-start-column="47" selection-end-line="140" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -985,27 +775,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/java/TP7/TPGestionListesCoursesAvecFiltres/TPGestionListesCourses/WebContent/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="54" lean-forward="true" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/TestsManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/TestsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://G:/java/TP7/TPGestionListesCoursesAvecFiltres/TPGestionListesCourses/WebContent/WEB-INF/jsp/index.jsp" />
     <entry file="file://$PROJECT_DIR$/web/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1020,38 +790,283 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Utilisateurs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/TestsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/TestsManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/TestsDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/EpreuvesDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-93">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/connected.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/UtilisateursDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="140" column="40" selection-start-line="140" selection-start-column="25" selection-end-line="140" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Questions_Tirage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/UtilisateursDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="88" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Propositions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/Questions_TirageDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="105" column="76" selection-start-line="105" selection-start-column="76" selection-end-line="105" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/Questions_TirageManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/PropositionsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/result.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="47" lean-forward="true" selection-start-column="47" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/ihm/servlet/CandidatServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        <state relative-caret-position="366">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/head.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="72" lean-forward="true" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
+        <state>
+          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/PromotionsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/CandidatsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/GenericDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/Questions_TirageDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/QuestionsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/Sections_TestDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/PropositionsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/TestsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/PropositionsDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="77" column="87" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="87" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="8" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/PropositionsManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bo/Reponses_Tirage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/candidat.jsp">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/connect.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/contact.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/Reponses_TirageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/bll/manager/impl/Reponses_TirageManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/Reponses_TirageDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/dal/dao/impl/Reponses_TirageDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+          <caret line="50" column="19" lean-forward="true" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/question.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/eni/QCM/ihm/servlet/QuestionServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>

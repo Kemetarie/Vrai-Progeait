@@ -10,6 +10,8 @@ public class Propositions implements Serializable {
 
     private boolean estBonne;
 
+    private int idQuestion;
+
     public Propositions() {
     }
 
@@ -41,5 +43,13 @@ public class Propositions implements Serializable {
 
     public void setEstBonne(boolean estBonne) {
         this.estBonne = estBonne;
+    }
+
+    public int getIdQuestion() {
+        return idQuestion;
+    }
+
+    public void setIdQuestion(int idQuestion) {
+        this.idQuestion = idQuestion;
     }
 }

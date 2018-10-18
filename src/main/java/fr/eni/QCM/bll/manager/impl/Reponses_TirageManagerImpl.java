@@ -9,6 +9,7 @@ import dal.exception.DaoException;
 import dal.factory.DAOFactory;
 import fr.eni.tp.web.common.bll.exception.ElementNotFoundException;
 import fr.eni.tp.web.common.bll.exception.ManagerException;
+import fr.eni.tp.web.common.exception.FunctionalException;
 import fr.eni.tp.web.common.util.ValidationUtil;
 
 import java.util.List;
@@ -57,5 +58,23 @@ public class Reponses_TirageManagerImpl implements Reponses_TirageManager {
         }
 
         return reponses_tirage;
+    }
+
+    @Override
+    public Reponses_Tirage insert(Reponses_Tirage reponses_Tirage) throws ManagerException {
+
+        try {
+
+            ValidationUtil.checkNotNull(reponses_Tirage);
+            ValidationUtil.checkNotNull(reponses_Tirage.getIdQuestion_Tirage());
+            ValidationUtil.checkNotNull(reponses_Tirage.getIdProposition());
+
+            reponses_tirageDAO.insert(reponses_Tirage);
+
+        } catch (DaoException e) {
+            throw new ManagerException(e.getMessage(), e);
+        }
+
+        return reponses_Tirage;
     }
 }
