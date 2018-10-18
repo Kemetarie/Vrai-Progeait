@@ -108,7 +108,7 @@ public class QuestionServlet extends HttpServlet {
         } catch (ManagerException e) {
             e.printStackTrace();
         } catch (ElementNotFoundException e) {
-            e.printStackTrace();
+            req.getRequestDispatcher("/QCM/resultat").forward(req, resp);
         }
 
         req.setAttribute("questions_tirage",questions_tirage);

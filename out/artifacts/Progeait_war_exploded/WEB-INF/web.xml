@@ -72,4 +72,12 @@
         <servlet-name>questionJsp</servlet-name>
         <url-pattern>/QCM/questionjsp</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>resultatJSP</servlet-name>
+        <jsp-file>/WEB-INF/jsp/resultat.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>resultatJSP</servlet-name>
+        <url-pattern>/QCM/resultat</url-pattern>
+    </servlet-mapping>
 </web-app>
