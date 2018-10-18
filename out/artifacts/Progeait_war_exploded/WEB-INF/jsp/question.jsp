@@ -31,7 +31,7 @@
                     </tbody>
                 </table>
 
-                <input type="submit" name="Valider">
+                <button type="submit" name="idQuestionSuivante" id="idQuestionSuivante" value="${requestScope.get('questions_tirage').numOrdre+1}">Question suivante</button>
 
             </form>
         </div>

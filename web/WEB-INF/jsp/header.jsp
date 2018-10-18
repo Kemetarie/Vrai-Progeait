@@ -9,6 +9,9 @@
         <c:choose>
         <c:when test="${sessionScope.get('user') == null}">
             <a class="active" href="/QCM/connect">Se connecter</a>
+            <form action="/QCM/question" method="post">
+                <button type="submit" name="idQuestionSuivante" id="idQuestionSuivante" value="1">Question</button>
+            </form>
         </c:when>
         <c:otherwise>
 
