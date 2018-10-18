@@ -1,9 +1,9 @@
 package dal.dao.impl;
 
 import bo.Reponses_Tirage;
+import dal.dao.MSSQLConnection;
 import dal.dao.Reponses_TirageDAO;
 import dal.exception.DaoException;
-import fr.eni.tp.web.common.dal.factory.MSSQLConnectionFactory;
 import fr.eni.tp.web.common.util.ResourceUtil;
 
 import java.sql.*;
@@ -12,10 +12,10 @@ import java.util.List;
 
 public class Reponses_TirageDaoImpl implements Reponses_TirageDAO {
 
-    private static final String SELECT_ALL_REPONSE_QUERY = "SELECT r.idQuestion_Tirage as reponse_idQuestion,r.idProposition as reponse_idPropo  FROM reponses_Tirage r";
-    private static final String SELECT_ONE_REPONSE_QUERY = "SELECT r.idQuestion_Tirage as reponse_idQuestion,r.idProposition as reponse_idPropo  FROM reponses_Tirage r where r.idReponseTirage = ?";
+    private static final String SELECT_ALL_REPONSE_QUERY = "SELECT r.idQuestion_Tirage as reponse_idQuestion,r.idProposition as reponse_idPropo  FROM reponse_Tirage r";
+    private static final String SELECT_ONE_REPONSE_QUERY = "SELECT r.idQuestion_Tirage as reponse_idQuestion,r.idProposition as reponse_idPropo  FROM reponse_Tirage r where r.idReponseTirage = ?";
     private static final String SELECT_ONE_TEST_BY_LIBELLE_QUERY = "SELECT t.id FROM test t where t.description = ?";
-    private static final String INSERT_REPONSE_QUERY = "INSERT INTO reponses_Tirage(idQuestion_Tirage, idProposition) VALUES (?, ?)";
+    private static final String INSERT_REPONSE_QUERY = "INSERT INTO reponse_Tirage(idQuestion_Tirage, idProposition) VALUES (?, ?)";
     //private static final String INSERT_NOTE_QUERY = "INSERT INTO test(libelle, description, duree, seuil_haut, seuil_bas) VALUES (?, ?, ?, ?, ?)";
     //private static final String DELETE_NOTE_QUERY = "DELETE FROM test WHERE id = ?";
     //private static final String UPDATE_NOTE_QUERY = "UPDATE test SET libelle = ?, description = ?, duree = ?, seuil_haut = ?, seuil_bas = ? WHERE id = ?";
@@ -39,12 +39,14 @@ public class Reponses_TirageDaoImpl implements Reponses_TirageDAO {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
 
-            statement = connection.prepareStatement(INSERT_REPONSE_QUERY, Statement.RETURN_GENERATED_KEYS);
+            statement = connection.prepareStatement(INSERT_REPONSE_QUERY);
 
             statement.setInt(1, element.getIdQuestion_Tirage());
             statement.setInt(2, element.getIdProposition());
+
+            statement.executeUpdate();
 
         } catch (SQLException e) {
             throw new DaoException(e.getMessage(), e);
@@ -73,7 +75,7 @@ public class Reponses_TirageDaoImpl implements Reponses_TirageDAO {
         Reponses_Tirage reponses = null;
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.prepareStatement(SELECT_ONE_REPONSE_QUERY);
 
             statement.setInt(1, integer);
@@ -99,7 +101,7 @@ public class Reponses_TirageDaoImpl implements Reponses_TirageDAO {
         List<Reponses_Tirage> list = new ArrayList<>();
 
         try {
-            connection = MSSQLConnectionFactory.get();
+            connection = MSSQLConnection.get();
             statement = connection.createStatement();
             resultSet = statement.executeQuery(SELECT_ALL_REPONSE_QUERY);
 

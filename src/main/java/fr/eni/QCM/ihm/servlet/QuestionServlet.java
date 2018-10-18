@@ -78,12 +78,12 @@ public class QuestionServlet extends HttpServlet {
             String[] id = prop[1].split("question");
             reponses_tirage.setIdProposition(Integer.parseInt(id[0]));
             reponses_tirage.setIdQuestion_Tirage(Integer.parseInt(id[1]));
-        }
 
-        try {
-            reponses_tirageManager.insert(reponses_tirage);
-        } catch (ManagerException e) {
-            e.printStackTrace();
+            try {
+                reponses_tirageManager.insert(reponses_tirage);
+            } catch (ManagerException e) {
+                e.printStackTrace();
+            }
         }
 
         req.getRequestDispatcher("/QCM/questionjsp").forward(req, resp);
